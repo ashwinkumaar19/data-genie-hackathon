@@ -65,4 +65,3 @@ A simple UI is written that inputs any time series data. The API processes this 
 + The model was saved using joblib in the local storage.
 + The saved model is used in writing the API.
 
-
