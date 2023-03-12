@@ -37,5 +37,32 @@ The dataset - [TSA Dataset](https://drive.google.com/file/d/15lmgaqcEyR4z0js64Th
 
 ## Training the classifier model
 
+The dataset constructed is fed to some classifier models and the best onw with highest accuracy is chosen. Classifier models the dataset was input into are
+
++ Random Forest
++ AdaBoost
++ Gradient Boosting
++ Logistic Regression
++ Gaussian Naive Bayes
++ Decision Tree
++ K-Nearest Neighbors
++ Multi-layer Perceptron
++ Support Vector Machine
+
+Hyperparameter tuning was also done and the data was fit to the models. Random Forest Classifier came out with the best accuracy score. Hence this model will be used further to choose the best time series model.
+
+## Handling the input time series data
+
+Time series characteristics are extracted from the input time series data. It is then provided to the RandomForestClassifier and the best model is predicted. The input data is then split into test and train data. The training data is trained using the time series model that was predicted.
+
+## REST API
+
+A simple UI is written that inputs any time series data. The API processes this data and forecasts point values, and the output is plotted. The underlying REST API uses the pre-trained classifier model to find the best time series model. 
+
+## Notes
+
++ The code for creating the dataset, training the classifier model was written in cloud. (Google Colab)
++ The model was saved using joblib in the local storage.
++ The saved model is used in writing the API.
 
 
