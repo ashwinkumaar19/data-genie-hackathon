@@ -90,11 +90,29 @@ This file contains functions which helps in
 
 ### App
 This file is responsible for handling the incoming request, parse the data, use the utility functions to predict/forecast. A sample output 
+<img width="1440" alt="Screenshot 2023-03-13 at 8 09 23 AM" src="https://user-images.githubusercontent.com/77486930/224598106-b76a7aef-8494-42f6-b641-f4d27f99dd16.png">
+
+This output is for a sample time series data. Predictions are done from 2016-12-01 to 2016-12-27. Both actual and predicted point_values are plotted in the graph. The time series model and the associated MAPE value is shown.
+
+API is also written to forecast based on the "period" input given by the user.
 
 
 ## Notes
 
 + The code for creating the dataset, training the classifier model was written in cloud. (Google Colab)
-+ The model was saved using joblib in the local storage.
-+ The saved model is used in writing the API.
++ The model is located in the "models" folder in this repo.
+
+## How to run
+
+### Backend
+
++ Install all the required modules from the requirements.txt
++ Run using
+> uvicorn app:app --reload
+
+### Frontend
+
++ Install required node_modules
++ Run using
+> npm start
 
