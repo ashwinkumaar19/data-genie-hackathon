@@ -49,7 +49,7 @@ The dataset constructed is fed to some classifier models and the best onw with h
 + Multi-layer Perceptron
 + Support Vector Machine
 
-Hyperparameter tuning was also done and the data was fit to the models. Random Forest Classifier came out with the best accuracy score. Hence this model will be used further to choose the best time series model.
+Hyperparameter tuning was done using GridSearchCV, class imbalance was handled using RandomOverSampler and the data was fit to the models. Random Forest Classifier came out with the best accuracy score. Hence this model will be used further to choose the best time series model.
 
 ![image](https://user-images.githubusercontent.com/77486930/224581394-7f4b7a8b-4fe5-4a85-b0b0-6925c4627fac.png)
 
