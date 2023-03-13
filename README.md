@@ -51,13 +51,46 @@ The dataset constructed is fed to some classifier models and the best onw with h
 
 Hyperparameter tuning was also done and the data was fit to the models. Random Forest Classifier came out with the best accuracy score. Hence this model will be used further to choose the best time series model.
 
+![image](https://user-images.githubusercontent.com/77486930/224581394-7f4b7a8b-4fe5-4a85-b0b0-6925c4627fac.png)
+
+The code for dataset creation and training the classifier is given in the data-genie.ipynb file in this repository.
+
 ## Handling the input time series data
 
 Time series characteristics are extracted from the input time series data. It is then provided to the RandomForestClassifier and the best model is predicted. The input data is then split into test and train data. The training data is trained using the time series model that was predicted.
 
 ## REST API
 
-A simple UI is written that inputs any time series data. The API processes this data and forecasts point values, and the output is plotted. The underlying REST API uses the pre-trained classifier model to find the best time series model. 
+A simple UI is written that inputs any time series data. The API processes this data and forecasts point values, and the output is plotted. The underlying REST API uses the pre-trained classifier model to find the best time series model. FastAPI was used as the backend framework for the API. Frontend was done using ReactJS.
+The files in the code are explained below
+
+Inputs for the API include 
+
++ date_from
++ date_to 
+Predictions are done from the start date to end date.
+
++ period
+Number of points to forecast into the future
+
+### Models
+This folder contains a class for each time series model that was taken into account. The functions in these files are
++ fit_model - fit the data into the model
++ get_predictions - get predictions from start_date to end_date
++ get_mape - get MAPE value
++ get_forecast - get forecast data based on the "period" input
+
+### Utility
+This file contains functions which helps in
++ get_features - get the time series characteristics from the input data
++ clean_data 
++ pre-process the data
++ feature selection
++ get_label - use the pre-trained classifier to choose the best time series model for the data
+
+### App
+This file is responsible for handling the incoming request, parse the data, use the utility functions to predict/forecast. A sample output 
+
 
 ## Notes
 
