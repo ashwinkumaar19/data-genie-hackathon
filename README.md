@@ -73,6 +73,10 @@ Predictions are done from the start date to end date.
 + period
 Number of points to forecast into the future
 
+<img width="1440" alt="Screenshot 2023-03-13 at 8 41 30 AM" src="https://user-images.githubusercontent.com/77486930/224599687-ac4058fb-1f38-48b5-94de-968eff32cfca.png">
+
+
+
 ### Models
 This folder contains a class for each time series model that was taken into account. The functions in these files are
 + fit_model - fit the data into the model
