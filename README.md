@@ -1,8 +1,8 @@
-# data-genie-hackathon
+# Time Series Classifier
 
-## Solution
+## Architecture
 
-The first step of the solution is to define a classification model that could choose the best time series model to fit the data. One approach is to fit the time series data into multiple models
+The first step is to define a classification model that could choose the best time series model to fit the data. One approach is to fit the time series data into multiple models
 and choose the one which has the least Mean Absolute Percentage Error (MAPE). In this solution, the numerical scores of time series characteristics like seasonality, trend, autocorrelation are calculated 
 are extracted from the data and a new data set is formed. This dataset is trained in multiple classification models and the best model is used for further functions. The best time series model is 
 chosen and the input data is fit, predictions are done using the model.
