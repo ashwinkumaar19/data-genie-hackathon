@@ -118,6 +118,7 @@ API is also written to forecast based on the "period" input given by the user.
 ### Frontend
 
 + Install required node_modules
+> npm install
 + Run using
 > npm start
 
